@@ -3,6 +3,20 @@ import { CommentList } from "@/components/CommentList";
 import { Vote } from "@/components/Vote";
 import { db } from "@/db";
 
+//ADDED FOR STRETCH GOAL
+// export async function generateMetadata({ params, searchParams }, parent) {
+//   const id = (await params).id;
+//   const res =
+//     await fetch(`SELECT posts.id, posts.title, posts.body, users.name FROM posts
+//     JOIN users ON posts.user_id = users.id
+//     WHERE posts.id = $1
+//     GROUP BY posts.id, users.name`);
+//   const post = await res.json();
+//   return {
+//     title: post.title,
+//   };
+// }
+
 export default async function SinglePostPage({ params }) {
   const postId = params.postId;
 
